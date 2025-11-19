@@ -1,0 +1,22 @@
+package codeforces;
+import java.util.*;
+public class translation {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s1 = sc.nextLine();
+        String s2 = sc.nextLine();
+        if(s1.length() != s2.length()){
+            System.out.println("NO");
+            return;
+        }
+
+        for(int i=0;i<s1.length();i++){
+            if(s1.charAt(i) != s2.charAt(s2.length()-1-i)){
+                System.out.println("NO");
+                return;
+            }
+        }
+        System.out.println("YES");
+    }
+
+}
